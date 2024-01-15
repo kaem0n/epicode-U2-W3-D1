@@ -150,7 +150,7 @@ compareButton2.addEventListener('click', function(){
     if (pets[parseInt(idInput1.value)].shareOwner(pets[parseInt(idInput2.value)])) {
         outputText2.innerText = `${pets[parseInt(idInput1.value)].petName} and ${pets[parseInt(idInput2.value)].petName} share the same owner!`
     } else {
-        outputText2.innerText = `${pets[parseInt(idInput1.value)].petName} and ${pets[parseInt(idInput2.value)].petName} dont' share the same owner.`
+        outputText2.innerText = `${pets[parseInt(idInput1.value)].petName} and ${pets[parseInt(idInput2.value)].petName} don't share the same owner.`
     }
    idInput1.value = ''
    idInput2.value = ''
