@@ -35,13 +35,13 @@ const createUserCard = function () {
     newCard.classList.add('me-2')
     newCard.classList.add('w-50')
     newCard.innerHTML = `
-        <div class="card-body">
-            <h5 class="card-title">${users[index1].firstName} ${users[index1].lastName}</h5>
-            <hr />
-            <h6 class="card-subtitle mb-2 text-body-secondary">Età: ${users[index1].age}</h6>
-            <h6 class="card-subtitle mb-2 text-body-secondary">Luogo: ${users[index1].location}</h6>
-        </div>
-        `
+      <div class="card-body">
+        <h5 class="card-title">${users[index1].firstName} ${users[index1].lastName}</h5>
+        <hr />
+        <h6 class="card-subtitle mb-2 text-body-secondary">Età: ${users[index1].age}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Luogo: ${users[index1].location}</h6>
+      </div>
+    `
     cardContainer1.appendChild(newCard)
   }
 }
@@ -182,5 +182,3 @@ resetButton2.addEventListener('click', function () {
   index2 = 0
   pets = []
 })
-
-console.log('pets')
