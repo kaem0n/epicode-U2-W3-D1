@@ -63,7 +63,7 @@ const compareButton1 = document.getElementById('compare1')
 const outputText1 = document.getElementById('output-text-1')
 
 compareButton1.addEventListener('click', function(){
-   outputText1.innerText = users[0].isOlderThan(users[1])
+    outputText1.innerText = users[0].isOlderThan(users[1])
 })
 
 const resetButton1 = document.getElementById('reset1')
@@ -152,8 +152,8 @@ compareButton2.addEventListener('click', function(){
     } else {
         outputText2.innerText = `${pets[parseInt(idInput1.value)].petName} and ${pets[parseInt(idInput2.value)].petName} don't share the same owner.`
     }
-   idInput1.value = ''
-   idInput2.value = ''
+    idInput1.value = ''
+    idInput2.value = ''
 })
 
 const resetButton2 = document.getElementById('reset2')
