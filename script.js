@@ -74,6 +74,7 @@ resetButton1.addEventListener('click', function(){
     surnameInput.value = ''
     ageInput.value = ''
     locationInput.value = ''
+    outputText1.innerText = ''
     index1 = 0
     users = []
 })
@@ -112,7 +113,8 @@ const createPetCard = function () {
         const newCard = document.createElement('div')
         newCard.classList.add('card')
         newCard.classList.add('me-2')
-        newCard.classList.add('w-50')
+        newCard.classList.add('w-25')
+        newCard.classList.add('mb-2')
         newCard.innerHTML = `
         <div class="card-body">
             <h5 class="card-title">${pets[index2].petName}</h5>
@@ -141,9 +143,17 @@ form2.addEventListener('submit', function(e){
 
 const compareButton2 = document.getElementById('compare2')
 const outputText2 = document.getElementById('output-text-2')
+const idInput1 = document.getElementById('id1')
+const idInput2 = document.getElementById('id2')
 
 compareButton2.addEventListener('click', function(){
-   outputText2.innerText = pets[0].shareOwner(pets[1])
+    if (pets[parseInt(idInput1.value)].shareOwner(pets[parseInt(idInput2.value)])) {
+        outputText2.innerText = `${pets[parseInt(idInput1.value)].petName} and ${pets[parseInt(idInput2.value)].petName} share the same owner!`
+    } else {
+        outputText2.innerText = `${pets[parseInt(idInput1.value)].petName} and ${pets[parseInt(idInput2.value)].petName} dont' share the same owner.`
+    }
+   idInput1.value = ''
+   idInput2.value = ''
 })
 
 const resetButton2 = document.getElementById('reset2')
@@ -154,6 +164,7 @@ resetButton2.addEventListener('click', function(){
     ownerInput.value = ''
     speciesInput.value = ''
     breedInput.value = ''
+    outputText2.innerText = ''
     index2 = 0
     pets = []
 })
