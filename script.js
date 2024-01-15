@@ -113,8 +113,8 @@ const createPetCard = function () {
         const newCard = document.createElement('div')
         newCard.classList.add('card')
         newCard.classList.add('me-2')
-        newCard.classList.add('w-25')
         newCard.classList.add('mb-2')
+        newCard.classList.add('w-25')
         newCard.innerHTML = `
         <div class="card-body">
             <h5 class="card-title">${pets[index2].petName}</h5>
